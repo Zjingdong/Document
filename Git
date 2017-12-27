@@ -1,0 +1,19 @@
+关于git
+git clone https://github.com/Zjingdong/Document.git 
+	将github上的仓库克隆到本地
+git status
+	查看git现在的状态，比如有文件做过了更新，新建了文件，本地是否与远程端相同
+git add 
+	将修改放入暂存区
+git commit
+	把暂存区的内容提交到当前分支
+	#如果不add只commit，则不会提交
+git push origin master
+	把本地git库中的push到远程   push <远程主机名> <本地分支名>:<远程分支名>
+	如果省略本地分支名，则表示删除指定的远程分支，因为这等同于推送一个空的本地分支到远程分支。例如：
+	git push origin :master 等同于
+	git push origin --delete master
+git push origin
+	如果当前分支与远程分支之间存在追踪关系，则本地分支和远程分支都可以省略，直接写远程主机名
+git push -u
+	使用-u选项制定一个默认主机，这样就可以直接git push  不用指定远程主机名 
