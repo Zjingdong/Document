@@ -1,6 +1,27 @@
 关于git
 git clone https://github.com/Zjingdong/Document.git 
-	将github上的仓库克隆到本地
+	将github上的仓库克隆到本地 克隆的时候远程主机自动命名为origin，如果想指定名称
+	git  clone -o changeName  https://github.com/Zjingdong/Document.git 
+
+git remote
+	git remote用于管理主机名
+	git remote 列出所有远程主机
+	git remote -v 参看远程主机的网址
+	git remote show <主机名> 可以查看该主机详细信息
+	git remote add <主机名> <网址>添加远程主机
+	git remote rm <主机名> 删除远程主机
+	git remote rename <old><new> 更名
+git pull 
+	取回远程主机某个分支的更新，再与本地的制定分支合并。
+	git pull origin next:master 取回origin的next分支，与本地的master分支合并
+	相当于 git fetch origin  然后git merge origin/next
+	本地分支和远程分支之间，有一种追踪关系（tracking）如果存在追踪关系，git pull省略远程分支名：git pull origin 表示本地的当千分之自动与对应的origin主机追踪分支合并
+
+	git pull -p 在本地删除远程已经删除的分支，等同于：
+	git fetch --prune origin
+	git fetch -p	
+
+
 git status
 	查看git现在的状态，比如有文件做过了更新，新建了文件，本地是否与远程端相同
 git add 
