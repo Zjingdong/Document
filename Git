@@ -11,6 +11,11 @@ git remote
 	git remote add <主机名> <网址>添加远程主机
 	git remote rm <主机名> 删除远程主机
 	git remote rename <old><new> 更名
+把http换成ssh方式的。
+1. git remote rm origin
+2. git remote add origin git@github.com:yuquan0821/demo.git
+3. git push origin 
+
 git pull 
 	取回远程主机某个分支的更新，再与本地的制定分支合并。
 	git pull origin next:master 取回origin的next分支，与本地的master分支合并
